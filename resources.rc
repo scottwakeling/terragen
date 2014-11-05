@@ -1,0 +1,155 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+CHAOSMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Save",                       CHAOS_FILE_SAVE
+        MENUITEM "Save &As",                    CHAOS_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       CHAOS_FILE_EXIT
+    END
+    POPUP "&Terrain"
+    BEGIN
+        MENUITEM "&Fault formation...",         CHAOS_TERRAIN_FAULTFORMATION
+        MENUITEM "&Set Grid...",                CHAOS_TERRAIN_SETGRID
+        MENUITEM "Calculate Fractal &Dimension", CHAOS_TERRAIN_FRACDIM
+        MENUITEM "&Blur",                       CHAOS_TERRAIN_BLUR
+        MENUITEM "Blur M&ore",                  CHAOS_TERRAIN_BLURMORE
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh",                    CHAOS_TERRAIN_REFRESH
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SETGRID DIALOG DISCARDABLE  0, 0, 202, 46
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Set grid value"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,145,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,145,24,50,14
+    EDITTEXT        IDC_GRIDVALUE,49,15,63,14,ES_AUTOHSCROLL
+    LTEXT           "Value",IDC_STATIC,22,17,19,8
+END
+
+IDD_FAULTDLG DIALOG DISCARDABLE  0, 0, 278, 127
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Fault line formation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,221,7,50,14
+    EDITTEXT        IDC_ITERATION_NUM,88,7,105,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FAULTDEPTH_START,88,26,104,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_FAULTDEPTH_FINISH,88,46,104,14,ES_AUTOHSCROLL
+    CONTROL         "Iterate fault line depth",IDC_CHK_FIXEDFAULTDEPTH,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | 
+                    WS_TABSTOP,14,71,84,10
+    LTEXT           "Iterations",IDC_STATIC,54,10,30,8
+    LTEXT           "Fault depth start",IDC_STATIC,32,29,52,8
+    LTEXT           "Fault depth finish",IDC_STATIC,28,47,54,8
+    CONTROL         "Use Logistic Function",IDC_CHK_USE_LOG_FUNC,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | WS_TABSTOP,115,
+                    71,84,10
+    CONTROL         "Seed from start height",IDC_CHK_RANDOM_SEED,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | WS_DISABLED | 
+                    WS_TABSTOP,114,86,85,10
+    CONTROL         "Retain all values",IDC_CHK_RETAINALL,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | BS_FLAT | WS_TABSTOP,30,
+                    86,68,10
+    PUSHBUTTON      "Cancel",IDCANCEL,221,25,50,14
+    CONTROL         "Progress1",IDC_PROGRESS,"msctls_progress32",WS_BORDER,7,
+                    106,264,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_FAULTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 271
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
